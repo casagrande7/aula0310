@@ -46,7 +46,7 @@ class Triangulo implements FormaGeometrica{
         let altura3;
         let area;
         altura1 = (this.ladoC/ 2);
-        altura2 = (altura1 * altura1) + (this.ladoB * this.ladoB);
+        altura2 = (this.ladoB * this.ladoB) - (altura1 * altura1) ;
         altura3 = Math.sqrt(altura2)
         area = (this.ladoC * altura3)/2;
         console.log("A área do triângulo é: " + area.toFixed(2) + " metros quadrados");

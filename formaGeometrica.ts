@@ -62,7 +62,27 @@ class Triangulo implements FormaGeometrica{
 }
 
 class Circulo implements FormaGeometrica{
+    raio: number;
+    pi: number;
 
+    constructor(raio: number, pi: number){
+        this.raio = raio;
+        this.pi = pi;
+    }
+
+    calcularArea(): number {
+       let calculo;
+       calculo = this.pi *(this.raio * this.raio);
+       console.log("Área do círculo é: " + calculo.toFixed(2) + " metros quadrados")
+       return calculo
+    }
+
+    calcularPerimetro(): number {
+        let calculo;
+        calculo = 2 *(this.pi * this.raio)
+        console.log("Perímetro do círculo é: " + calculo + " metros")
+        return calculo
+    }
 }
 
 
@@ -73,5 +93,9 @@ retangulo.calcularPerimetro();
 const triangulo =  new Triangulo(12.5, 12.5, 20);
 triangulo.calcularArea();
 triangulo.calcularPerimetro();
+
+const circulo = new Circulo(4, 3.14);
+circulo.calcularArea();
+circulo.calcularPerimetro();
 
 
